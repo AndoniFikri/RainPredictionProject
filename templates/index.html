@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- link bootstrap local -->
+	<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css">
+
+	<!-- link css -->
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
+	<title>Logistic regression and SVM</title>
+</head>
+<body>
+
+	<!-- box-besar -->
+	<div class="box-huge mt-3">
+		<!-- title -->
+		<div class="center-title line-hight">
+			<h1>Logistic regression and CVM</h1>
+			<h5>Hacktiv8 for data science</h5>
+		</div>
+		<!-- end title -->
+
+		<div class="row mt-4">
+			<div class="col-sm-6">
+				<!-- image -->
+				<div class="image">
+					<img src="../static/Images/welcome.png" alt="welcome">
+				</div>
+
+				<!-- input -->
+				<form action="/predict" method="POST" >
+				<div class="mb-3" style="margin-top: 55px">
+			</div>
+			<div class="col-sm-6">
+				<div class="mb-3">
+				  <label for="windgustspeed" class="form-label"><b>Wind Gust Speed</b></label>
+				  <input type="number" class="form-control" id="windgustspeed" min="1" max="100" name="windgustspeed">
+				</div>
+				<div class="mb-3">
+				  <label for="humidity" class="form-label"><b>Humidity at 3pm</b></label>
+				  <input type="number" class="form-control" id="humidity" min="1" max="100" name="humidity3pm">
+				</div>
+				<div class="mb-3">
+				  <label for="pressure9pm" class="form-label"><b>Pressure at 9am</b></label>
+				  <input type="number" class="form-control" id="pressure9pm" min="1" max="2000" name="pressure9am">
+				</div>
+				<div class="flet-decoration mb-3">
+					<label for="Raintoday" class="form-label"><b>Is it Raining Today?</b></label>
+					<input type="radio" class="cek" name="RainToday" id="rain" value="rain" checked>
+					<label class="btn btn-radio" for="rain"><img src="../static/images/rain.png" style="width: 30px"> <b>Raining</b></label>
+					<input type="radio" class="cek" name="RainToday" id="not-rain" value="not-rain">
+					<label class="btn btn-radio" for="not-rain"><img src="../static/images/cloudy-day.png" style="width: 30px"> <b>Not Raining</b></label>
+				</div>
+				<div class="mb-3">
+				  <label for="weingustdirection" class="form-label"><b>Wind gust direction</b></label>
+				  	<select class="form-select" aria-label="Default select example" name="WindGustDir">
+					  <option value="W">W</option>
+					  <option value="SE">SE</option>
+					  <option value="E">E</option>
+					  <option value="N">N</option>
+					  <option value="S">S</option>
+					  <option value="SSE">SSE</option>
+					  <option value="WSW">WSW</option>
+					  <option value="SW">SW</option>
+					  <option value="SSW">SSW</option>
+					  <option value="WNW">WNW</option>
+					  <option value="NW">NW</option>
+					  <option value="ENE">ENE</option>
+					  <option value="ESE">ESE</option>
+					  <option value="NE">NE</option>
+					  <option value="NNW">NNW</option>
+					  <option value="NNE">NNE</option>
+					</select>
+				</div>
+				<div class="flet-decoration-between mb-3">
+					<button type="submit" class="btn btn-first">Submit</button>
+				<div class="form-group ">
+					<label for="Predict" class="col-form-label">Rain Predicion:</label>
+				</div>
+					<div class="form-group">
+					<p  class="form-control"><b>{{Prediction}}</b></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>

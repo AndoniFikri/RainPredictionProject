@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body {
+    background-color: #F5F5F5;
+    color: #5C5B5B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins';
+    font-weight: normal;
+}
+
+h1{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.box-huge{
+    background-color: #FFFFFF;
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.center-title{
+    text-align: center;
+}
+
+.line-hight{
+    line-height: 15px;
+}
+
+.image{
+    width: 400px;
+}
+
+.image img{
+    width: 95%;
+}
+
+.form-ui{
+    height: 25px;
+    width: 300px;
+    border-style: solid;
+    border-color: #686F68;
+    border-width: 1.5px;
+    /*background-color: #F9F9F9;*/
+}
+
+.drop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flet-decoration{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flet-decoration-between{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn-radio{
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.btn-radio:hover{
+    background-color: #F1F1F1;
+}
+
+input[type="radio"].cek{
+    display: none;
+}
+input[type="radio"].cek:checked + label {
+  background-color: #796AAF;
+  color: #FFFFFF;
+}
+
+.btn-first {
+    background-color: #796AAF;
+    color: #FFFFFF;
+    width: 48%;
+}
+
+.btn-secound {
+    background-color: #033630;
+    color: #FFFFFF;
+    width: 48%;
+}
